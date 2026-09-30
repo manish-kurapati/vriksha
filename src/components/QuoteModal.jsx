@@ -185,6 +185,7 @@ _Sent via Vriksha Website Quotation Form_`;
                   onChange={handleChange}
                   className="w-full px-3.5 py-2.5 text-base sm:text-sm bg-surface-warm border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-primary transition-colors cursor-pointer"
                 >
+                  <option value="Civil Construction">Civil Construction</option>
                   <option value="Residential Construction">Residential Construction</option>
                   <option value="Commercial Construction">Commercial Construction</option>
                   <option value="Interior Design">Interior Design</option>

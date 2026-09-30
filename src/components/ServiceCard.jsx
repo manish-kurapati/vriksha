@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Home, Building2, Armchair, Wrench } from 'lucide-react';
+import { ArrowRight, Home, Building2, Armchair, Wrench, HardHat } from 'lucide-react';
 
 const serviceIcons = {
+  'civil-construction': HardHat,
   'residential-construction': Home,
   'commercial-construction': Building2,
   'interior-design': Armchair,

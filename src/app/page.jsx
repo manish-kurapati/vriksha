@@ -9,7 +9,6 @@ import ServiceCard from '../components/ServiceCard';
 import CTASection from '../components/CTASection';
 import ScrollReveal from '../components/ScrollReveal';
 import BrandsSection from '../components/BrandsSection';
-import FormworkSection from '../components/FormworkSection';
 import { 
   projectsData, 
   servicesData, 
@@ -372,34 +371,25 @@ export default function HomePage() {
           {/* Mobile Sideways 1-Card Snap Scroll / Desktop Grid */}
           <div
             id="services-slider"
-            className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
+            className="flex md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
           >
-            {servicesData
-              .filter((service) => service.id !== 'formwork-shuttering')
-              .map((service, index) => (
-                <div key={service.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
-                  <ScrollReveal animation="fade-up" delay={index * 100} duration={600}>
-                    <ServiceCard service={service} index={index} />
-                  </ScrollReveal>
-                </div>
-              ))}
+            {servicesData.map((service, index) => (
+              <div key={service.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
+                <ScrollReveal animation="fade-up" delay={index * 100} duration={600}>
+                  <ServiceCard service={service} index={index} />
+                </ScrollReveal>
+              </div>
+            ))}
           </div>
 
           {/* Mobile Swipe Dot Indicators */}
           <div className="flex md:hidden justify-center items-center gap-1.5 mt-4">
-            {servicesData
-              .filter((service) => service.id !== 'formwork-shuttering')
-              .map((s, i) => (
-                <span key={s.id} className="w-2 h-2 rounded-full bg-navy-deep/20 transition-all" />
-              ))}
+            {servicesData.map((s) => (
+              <span key={s.id} className="w-2 h-2 rounded-full bg-navy-deep/20 transition-all" />
+            ))}
           </div>
         </div>
       </section>
-
-      {/* ============================================================ */}
-      {/* 5. FORMWORK & SHUTTERING SYSTEMS                             */}
-      {/* ============================================================ */}
-      <FormworkSection />
 
       {/* ============================================================ */}
       {/* 6. MATERIALS & SOURCING — BRANDS                             */}

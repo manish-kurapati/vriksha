@@ -25,6 +25,41 @@ export const navLinks = [
 
 export const servicesData = [
   {
+    id: "civil-construction",
+    slug: "civil-construction",
+    href: "/services/civil-construction",
+    title: "Civil Construction",
+    eyebrow: "OUR SERVICES",
+    summary: "Structural framing, seismic foundations & precision civil execution.",
+    heroImage: "/images/service_formwork_shuttering.jpg",
+    accentColor: "royal",
+    overview: "Civil construction is the fundamental backbone of every enduring structure. At Vriksha, we deliver complete turnkey civil works—from precision excavation and seismic foundation engineering to advanced RCC framing, brick masonry, and high-performance monolithic casting. Our engineering-driven approach ensures structural permanence, zero-deviation plumbness, and uncompromised build quality.",
+    deliverables: [
+      "Soil Testing, Excavation & Deep Foundation Engineering",
+      "Seismic-Resistant RCC Framing (Columns, Beams & Slabs)",
+      "High-Performance Monolithic Concrete Casting",
+      "Precision Brickwork, Block Masonry & Plastering",
+      "Integrated Structural Waterproofing & Thermal Protection",
+      "Turnkey Civil Execution with Strict Laboratory Quality Audits"
+    ],
+    features: [
+      {
+        title: "Engineered RCC Framing",
+        description: "Precision-cast reinforced concrete columns, plinth beams, and monolithic slabs designed to withstand seismic loads with zero column bulging and true 90° plumbness."
+      },
+      {
+        title: "Foundation & Soil Mechanics",
+        description: "Scientific bearing capacity analysis, pile/raft foundations, and integrated multi-layer damp-proof courses safeguarding the structure against moisture ingress."
+      },
+      {
+        title: "In-House Quality Standards",
+        description: "100% owned equipment and strict laboratory concrete cube testing ensuring M25–M40 design strength across every floor casting."
+      }
+    ],
+    timeline: "6 – 18 Months",
+    materials: ["Fe 550D TMT Rebar", "Ultratech/ACC 53 Grade Cement", "M25–M40 Design Mix Concrete", "Engineered AAC / Red Clay Bricks"]
+  },
+  {
     id: "residential-construction",
     slug: "residential-construction",
     href: "/services/residential-construction",
@@ -159,40 +194,6 @@ export const servicesData = [
     ],
     timeline: "2 – 6 Months",
     materials: ["Restored Sandstone", "Structural Steel Lintels", "Minimal Slimline Glazing", "Honed Basalt Tiles"]
-  },
-  {
-    id: "formwork-shuttering",
-    slug: "formwork-shuttering",
-    href: "/services/formwork-shuttering",
-    title: "Formwork & Shuttering",
-    eyebrow: "OUR SERVICES",
-    summary: "Precision formwork solutions for every construction type.",
-    heroImage: "/images/service_formwork_shuttering.jpg",
-    accentColor: "royal",
-    overview: "Formwork and shuttering are the backbone of every concrete structure. At Vriksha, we specialise in MS Box Shuttering and PVC Shuttering — delivering clean, reusable, and cost-effective mould systems that ensure dimensional accuracy, faster cycle times, and superior concrete finishes for both residential and commercial projects.",
-    deliverables: [
-      "MS Box Shuttering for Columns, Beams & Slabs",
-      "PVC Shuttering Panels for Walls & Slabs",
-      "Formwork Design, Supply & Erection",
-      "Stripping, Cleaning & Maintenance",
-      "Turnkey Shuttering Management on Site"
-    ],
-    features: [
-      {
-        title: "MS Box Shuttering",
-        description: "Our primary shuttering system — fabricated from mild steel box sections, offering high rigidity, multiple reuses, and excellent concrete surface finish. Ideal for columns, beams, slabs, and walls in residential and commercial projects."
-      },
-      {
-        title: "PVC Shuttering",
-        description: "Lightweight and corrosion-resistant PVC panels that are easy to handle, clean, and reuse. Delivers smooth concrete surfaces with minimal finishing work, making it highly cost-effective for repetitive casting."
-      },
-      {
-        title: "Mivan (Aluminium) Shuttering",
-        description: "An industrial-grade aluminium formwork system used in large-scale high-rise projects for simultaneous casting of walls and slabs. While we do not operate Mivan in-house, we facilitate and support Mivan-based projects in collaboration with certified partners."
-      }
-    ],
-    timeline: "Project-Dependent",
-    materials: ["Mild Steel Box Sections", "High-Grade PVC Panels", "Tie Rods & Wing Nuts", "Plywood Backing Sheets"]
   }
 ];
 

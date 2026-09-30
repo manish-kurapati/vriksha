@@ -123,6 +123,12 @@ export default function ServicesPage() {
               </thead>
               <tbody className="divide-y divide-surface-border text-xs sm:text-sm text-ink-muted font-light">
                 <tr>
+                  <td className="p-4 sm:p-5 font-medium text-navy-deep">Civil Construction</td>
+                  <td className="p-4 sm:p-5">End-to-end structural works, seismic RCC framing & foundations</td>
+                  <td className="p-4 sm:p-5">Fe 550D Steel, M25–M40 Concrete, AAC Blocks</td>
+                  <td className="p-4 sm:p-5 text-brand-orange font-medium">10-Year Structural</td>
+                </tr>
+                <tr>
                   <td className="p-4 sm:p-5 font-medium text-navy-deep">Residential Construction</td>
                   <td className="p-4 sm:p-5">Soil-to-key turnkey villas, duplexes & estates</td>
                   <td className="p-4 sm:p-5">M40 Concrete, Honed Limestone, Low-E Glass</td>
