@@ -104,18 +104,16 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* RIGHT: Get a Quote CTA + Hamburger Menu */}
+            {/* RIGHT: Direct Call CTA + Hamburger Menu */}
             <div className="flex items-center space-x-2 sm:space-x-4 z-10">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  openModal();
-                }}
+              <a
+                href={`tel:${siteConfig.phone}`}
                 className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 bg-brand-orange text-surface-white hover:bg-brand-orangeHover text-xs font-semibold rounded-full transition-all shadow-md active:scale-95"
+                aria-label={`Call ${siteConfig.phoneFormatted}`}
               >
                 <span>Call</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
-              </button>
+              </a>
 
               {/* Mobile Hamburger Button */}
               <button
