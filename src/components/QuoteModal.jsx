@@ -102,7 +102,7 @@ _Sent via Vriksha Website Quotation Form_`;
   const sliderPercentage = ((budgetLakhs - 10) / (300 - 10)) * 100;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#081824]/75 backdrop-blur-sm transition-opacity">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-6 bg-[#081824]/75 backdrop-blur-sm transition-opacity">
       <div 
         className="relative w-full max-w-xl bg-surface-white border border-surface-border shadow-2xl p-5 sm:p-8 md:p-9 transition-all max-h-[92vh] overflow-y-auto rounded-xl"
         onClick={(e) => e.stopPropagation()}
