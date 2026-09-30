@@ -8,7 +8,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1B2B] text-surface-white border-t border-navy-deep/40">
+    <footer className="bg-[#081824] text-surface-white border-t border-[#E5DACB]/15">
       {/* Main Multi-Column Section */}
       <div className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,16 +16,14 @@ export default function Footer() {
             {/* Col 1: Brand & Logo (4 cols) */}
             <div className="lg:col-span-4 space-y-5">
               <Link href="/" className="inline-block hover:opacity-95 transition-opacity">
-                <div className="bg-surface-white px-3.5 py-2 rounded-xl inline-flex items-center shadow-md">
-                  <div className="relative h-9 sm:h-10 w-36 sm:w-44">
-                    <Image
-                      src="/images/vriksha_logo.png"
-                      alt="Vriksha Constructions & Interior Designers"
-                      fill
-                      sizes="176px"
-                      className="object-contain object-left"
-                    />
-                  </div>
+                <div className="relative h-20 sm:h-24 w-60 sm:w-72">
+                  <Image
+                    src="/images/vriksha_logo_white.png"
+                    alt="Vriksha Constructions & Interior Designers"
+                    fill
+                    sizes="(max-width: 640px) 240px, 288px"
+                    className="object-contain object-left"
+                  />
                 </div>
               </Link>
               <p className="text-sm text-blue-veryLight/80 font-light leading-relaxed max-w-sm">
@@ -34,29 +32,17 @@ export default function Footer() {
               
               {/* Social Icons */}
               <div className="flex items-center gap-3 pt-2">
-                <a href="#" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white transition-colors" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com/vriksha_constructions?stkn=MWJxajI0bWFsajUwMQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-brand-orange hover:bg-brand-orange transition-all duration-300 shadow-sm"
+                  aria-label="Follow Vriksha Constructions on Instagram"
+                >
                   <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                  </svg>
-                </a>
-                <a href="#" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white transition-colors" aria-label="Facebook">
-                  <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </a>
-                <a href="#" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white transition-colors" aria-label="LinkedIn">
-                  <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect width="4" height="12" x="2" y="9" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
-                </a>
-                <a href="#" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-white transition-colors" aria-label="YouTube">
-                  <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-                    <polygon points="10 15 15 12 10 9 10 15" />
                   </svg>
                 </a>
               </div>
@@ -123,8 +109,8 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail className="w-3.5 h-3.5 text-blue-soft shrink-0" />
-                  <a href="mailto:info@vriksha.in" className="hover:text-surface-white transition-colors">
-                    info@vriksha.in
+                  <a href={`mailto:${siteConfig.email}`} className="hover:text-surface-white transition-colors">
+                    {siteConfig.email}
                   </a>
                 </li>
                 <li className="flex items-start gap-2.5">

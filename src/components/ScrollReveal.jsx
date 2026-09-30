@@ -5,10 +5,11 @@ import React, { useEffect, useRef, useState } from 'react';
 export default function ScrollReveal({
   children,
   className = '',
-  animation = 'fade-up', // 'fade-up', 'fade-in', 'slide-left', 'slide-right', 'zoom-in'
+  animation = 'fade-up', // 'fade-up', 'fade-down', 'fade-in', 'slide-left', 'slide-right', 'zoom-in'
   delay = 0,
-  duration = 600,
-  threshold = 0.12,
+  duration = 650,
+  threshold = 0.08,
+  once = false, // false enables re-animating whenever scrolling up or down
 }) {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef(null);
@@ -19,11 +20,20 @@ export default function ScrollReveal({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            observer.unobserve(entry.target);
+            if (once) {
+              observer.unobserve(entry.target);
+            }
+          } else {
+            if (!once) {
+              setIsVisible(false);
+            }
           }
         });
       },
-      { threshold }
+      { 
+        threshold,
+        rootMargin: '0px 0px -30px 0px' 
+      }
     );
 
     const current = domRef.current;
@@ -34,46 +44,63 @@ export default function ScrollReveal({
     return () => {
       if (current) observer.unobserve(current);
     };
-  }, [threshold]);
+  }, [threshold, once]);
 
   const getAnimationStyles = () => {
-    const baseTransition = `opacity ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`;
+    // When entering, use full duration, delay, and luxurious easing.
+    // When leaving, reset quickly and cleanly with 0 delay so re-entry is always primed.
+    const enterTransition = `opacity ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`;
+    const exitTransition = `opacity 200ms ease-out 0ms, transform 200ms ease-out 0ms`;
+    const transition = isVisible ? enterTransition : exitTransition;
 
     switch (animation) {
       case 'fade-up':
         return {
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'translateY(0)' : 'translateY(28px)',
-          transition: baseTransition,
+          transition,
+          willChange: 'opacity, transform',
+        };
+      case 'fade-down':
+        return {
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? 'translateY(0)' : 'translateY(-28px)',
+          transition,
+          willChange: 'opacity, transform',
         };
       case 'fade-in':
         return {
           opacity: isVisible ? 1 : 0,
-          transition: `opacity ${duration}ms ease-out ${delay}ms`,
+          transition: isVisible ? `opacity ${duration}ms ease-out ${delay}ms` : `opacity 200ms ease-out 0ms`,
+          willChange: 'opacity',
         };
       case 'slide-left':
         return {
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'translateX(0)' : 'translateX(-32px)',
-          transition: baseTransition,
+          transition,
+          willChange: 'opacity, transform',
         };
       case 'slide-right':
         return {
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'translateX(0)' : 'translateX(32px)',
-          transition: baseTransition,
+          transition,
+          willChange: 'opacity, transform',
         };
       case 'zoom-in':
         return {
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'scale(1)' : 'scale(0.95)',
-          transition: baseTransition,
+          transition,
+          willChange: 'opacity, transform',
         };
       default:
         return {
           opacity: isVisible ? 1 : 0,
           transform: isVisible ? 'translateY(0)' : 'translateY(24px)',
-          transition: baseTransition,
+          transition,
+          willChange: 'opacity, transform',
         };
     }
   };

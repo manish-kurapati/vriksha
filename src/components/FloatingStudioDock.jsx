@@ -22,7 +22,7 @@ export default function FloatingStudioDock() {
   };
 
   return (
-    <aside aria-label="Floating Studio Actions" className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col items-end gap-2.5 sm:gap-3 pointer-events-none">
+    <aside aria-label="Floating Studio Actions" className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom,0px))] sm:bottom-6 right-3 sm:right-6 z-40 flex flex-col items-end gap-2 sm:gap-3 pointer-events-none">
       {/* Scroll to Top */}
       {showScrollTop && (
         <button
@@ -38,7 +38,7 @@ export default function FloatingStudioDock() {
       <div className="pointer-events-auto flex items-center gap-1.5 sm:gap-2 p-1.5 bg-navy-dark/95 backdrop-blur-md border border-white/20 shadow-2xl rounded-full text-surface-white">
         <a
           href={`tel:${siteConfig.phone}`}
-          className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 bg-gradient-to-r from-brand-orange to-[#F06529] hover:opacity-95 text-surface-white text-[11px] sm:text-xs uppercase tracking-editorial font-semibold rounded-full transition-all shadow-md btn-orange-glow"
+          className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 bg-gradient-to-r from-brand-orange to-[#FF914D] hover:opacity-95 text-surface-white text-[11px] sm:text-xs uppercase tracking-editorial font-semibold rounded-full transition-all shadow-md btn-orange-glow"
           title={`Call ${siteConfig.phoneFormatted}`}
         >
           <Phone className="w-3.5 h-3.5 animate-pulse-subtle" />

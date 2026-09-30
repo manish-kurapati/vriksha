@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/images/vriksha_logo.png" />
       </head>
-      <body className="min-h-screen flex flex-col bg-surface-white text-ink-main selection:bg-blue-royal selection:text-surface-white antialiased">
+      <body className="min-h-screen flex flex-col bg-surface-warm text-ink-main selection:bg-brand-orange selection:text-surface-white antialiased">
         <QuoteModalProvider>
           <Navbar />
           <main className="flex-grow pt-[60px] sm:pt-[76px]">

@@ -9,7 +9,7 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <div className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center bg-surface-white">
+    <div className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center bg-surface-warm">
       <span className="text-[11px] font-semibold tracking-editorial text-blue-royal uppercase block mb-2">
         ERROR
       </span>
@@ -22,7 +22,7 @@ export default function Error({ error, reset }) {
       <div className="flex items-center gap-4">
         <button
           onClick={() => reset()}
-          className="px-6 py-3 bg-brand-orange text-surface-white hover:bg-[#c45a1b] text-xs font-semibold rounded-full transition-colors shadow-md"
+          className="px-6 py-3 bg-brand-orange text-surface-white hover:bg-brand-orangeHover text-xs font-semibold rounded-full transition-colors shadow-md"
         >
           Try Again
         </button>

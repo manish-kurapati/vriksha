@@ -28,21 +28,21 @@ export default function ServiceCard({ service, index = 0 }) {
         />
       </div>
 
-      <div className="p-6 flex flex-col flex-1 justify-between">
+      <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between">
         <div>
-          <div className="w-10 h-10 -mt-11 mb-4 relative z-10 bg-surface-white border border-surface-border shadow-md rounded-full flex items-center justify-center text-navy-deep group-hover:bg-navy-deep group-hover:text-surface-white transition-all">
+          <div className="w-10 h-10 -mt-10 sm:-mt-11 mb-3 sm:mb-4 relative z-10 bg-surface-white border border-surface-border shadow-md rounded-full flex items-center justify-center text-navy-deep group-hover:bg-brand-orange group-hover:text-surface-white transition-all duration-300">
             <IconComponent className="w-4 h-4" />
           </div>
           
-          <h3 className="text-lg font-semibold text-navy-deep group-hover:text-blue-royal transition-colors">
+          <h3 className="text-base sm:text-lg font-semibold text-navy-deep group-hover:text-brand-orange transition-colors">
             {service.title}
           </h3>
-          <p className="mt-2 text-xs sm:text-sm text-ink-muted leading-relaxed">
+          <p className="mt-2 text-xs sm:text-sm text-ink-muted leading-relaxed font-light">
             {service.summary}
           </p>
         </div>
 
-        <div className="pt-5 mt-5 flex items-center gap-1.5 text-xs font-medium text-navy-deep group-hover:text-blue-royal transition-colors">
+        <div className="pt-4 sm:pt-5 mt-4 sm:mt-5 flex items-center gap-1.5 text-xs font-semibold text-brand-orange group-hover:text-brand-orangeHover transition-colors">
           <span>Learn More</span>
           <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
         </div>

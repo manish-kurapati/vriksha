@@ -8,6 +8,8 @@ import ProjectCard from '../components/ProjectCard';
 import ServiceCard from '../components/ServiceCard';
 import CTASection from '../components/CTASection';
 import ScrollReveal from '../components/ScrollReveal';
+import BrandsSection from '../components/BrandsSection';
+import FormworkSection from '../components/FormworkSection';
 import { 
   projectsData, 
   servicesData, 
@@ -23,21 +25,22 @@ import {
   Compass, 
   Users, 
   ShieldCheck,
-  Quote
+  Quote,
+  Clock
 } from 'lucide-react';
 
 const heroSlides = [
+  {
+    image: '/images/hero_modern_villa.jpg',
+    title: 'The Modern Villa • Jubilee Hills',
+  },
   {
     image: '/images/hero_hillside_infinity_villa.jpg',
     title: 'The Hillside Infinity Villa • Jubilee Hills',
   },
   {
-    image: '/images/hero_modern_villa.jpg',
-    title: 'The Azure Villa • Jubilee Hills',
-  },
-  {
     image: '/images/project_contemporary_residence.jpg',
-    title: 'The Linear Courtyard House • Banjara Hills',
+    title: 'The Courtyard Villa • Banjara Hills',
   }
 ];
 
@@ -59,7 +62,7 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* 1. FULL SCREEN HERO BANNER WITH AUTO-ROTATING IMAGES        */}
       {/* ============================================================ */}
-      <section className="relative w-full min-h-[calc(100svh-60px)] sm:min-h-[calc(100svh-76px)] lg:h-[calc(100vh-76px)] overflow-hidden flex items-center border-b border-surface-border bg-navy-dark">
+      <section className="relative w-full min-h-[calc(100svh-60px)] sm:min-h-[calc(100svh-76px)] lg:min-h-[calc(100vh-76px)] overflow-hidden flex items-center border-b border-surface-border bg-navy-dark">
         {/* Full-Screen Background Images with Smooth Crossfade */}
         <div className="absolute inset-0 z-0">
           {heroSlides.map((slide, idx) => (
@@ -80,17 +83,17 @@ export default function HomePage() {
             </div>
           ))}
           {/* Deep Left Gradient Overlay so Left Text Pops with Ultra Clarity */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071320]/95 via-[#0B1B2B]/75 to-transparent sm:via-[#0B1B2B]/55 z-[2] pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071320]/80 via-transparent to-[#071320]/30 z-[2] pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#081824]/95 via-[#0C2436]/75 to-transparent sm:via-[#0C2436]/55 z-[2] pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#081824]/80 via-transparent to-[#081824]/30 z-[2] pointer-events-none" />
         </div>
 
         {/* Content Container (Left Overlay) */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-16 lg:py-20 flex flex-col justify-between h-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 sm:py-12 lg:py-14 flex flex-col justify-between min-h-[calc(100svh-60px)] sm:min-h-[calc(100svh-76px)] lg:min-h-[calc(100vh-76px)]">
           {/* Main Headline & Actions */}
-          <div className="max-w-xl text-left my-auto">
+          <div className="max-w-xl text-left my-auto pt-4 sm:pt-6">
             {/* Eyebrow */}
             <span className="inline-flex items-center gap-2 px-3 py-1 bg-brand-orange text-surface-white text-[10px] sm:text-[11px] font-semibold tracking-editorial uppercase rounded-full mb-4 sm:mb-6 shadow-sm">
-              ARCHITECTURE • INTERIORS • BETTER LIVING
+              CONSTRUCTION • ARCHITECTURE • INTERIORS
             </span>
 
             {/* Headline */}
@@ -101,15 +104,15 @@ export default function HomePage() {
             </h1>
 
             {/* Subtitle */}
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base text-blue-veryLight/90 font-light leading-relaxed max-w-md drop-shadow-xs">
-              Thoughtful construction and interior design solutions that blend aesthetics, functionality and lasting quality.
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base text-blue-veryLight/90 font-light leading-relaxed max-w-lg drop-shadow-xs">
+              Thoughtful construction and interior design solutions that blend aesthetics, functionality, and lasting quality. We also specialize in green, sustainable construction engineered for eco-friendly, energy-efficient living.
             </p>
 
             {/* Action Buttons */}
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <button
                 onClick={() => openModal()}
-                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-brand-orange text-white hover:bg-[#c45a1b] text-xs font-semibold rounded-full transition-all shadow-xl active:scale-95"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-brand-orange text-white hover:bg-brand-orangeHover text-xs font-semibold rounded-full transition-all shadow-xl active:scale-95"
               >
                 <span>Get a Consultation</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -128,7 +131,7 @@ export default function HomePage() {
           </div>
 
           {/* Integrated Stats Bar at Bottom Left */}
-          <div className="pt-8 sm:pt-10 border-t border-white/20 grid grid-cols-3 gap-3 sm:gap-6 text-left max-w-lg">
+          <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 pb-4 sm:pb-6 border-t border-white/20 grid grid-cols-3 gap-3 sm:gap-6 text-left max-w-lg">
             <div>
               <div className="text-2xl sm:text-3xl font-serif text-surface-white font-normal drop-shadow-sm">50+</div>
               <div className="text-[11px] text-blue-veryLight/80 mt-0.5 font-light">Projects Completed</div>
@@ -176,8 +179,8 @@ export default function HomePage() {
                 </div>
 
                 {/* 3 Icons Features Row */}
-                <div className="mt-12 pt-8 border-t border-surface-border grid grid-cols-3 gap-4">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2.5">
+                <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-surface-border grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
+                  <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full border border-surface-border flex items-center justify-center text-navy-deep shrink-0">
                       <Compass className="w-4 h-4" />
                     </div>
@@ -186,7 +189,7 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2.5">
+                  <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full border border-surface-border flex items-center justify-center text-navy-deep shrink-0">
                       <Users className="w-4 h-4" />
                     </div>
@@ -195,7 +198,7 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2.5">
+                  <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full border border-surface-border flex items-center justify-center text-navy-deep shrink-0">
                       <ShieldCheck className="w-4 h-4" />
                     </div>
@@ -259,7 +262,7 @@ export default function HomePage() {
                   </Link>
 
                   {/* Mobile Sideways Arrow Buttons */}
-                  <div className="flex sm:hidden items-center gap-2">
+                  <div className="flex md:hidden items-center gap-2">
                     <button
                       onClick={() => {
                         const el = document.getElementById('projects-slider');
@@ -286,20 +289,22 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          {/* Mobile Sideways 1-Card Snap Scroll / Desktop Grid */}
+          {/* Mobile Sideways 1-Card Snap Scroll / Tablet & Desktop Grid */}
           <div
             id="projects-slider"
-            className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
+            className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
           >
             {projectsData.slice(0, 3).map((project, idx) => (
-              <div key={project.id} className="w-full min-w-full sm:min-w-0 sm:w-full shrink-0 sm:shrink snap-center">
-                <ProjectCard project={project} priority={idx === 0} />
+              <div key={project.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
+                <ScrollReveal animation="fade-up" delay={idx * 120} duration={600}>
+                  <ProjectCard project={project} priority={idx === 0} />
+                </ScrollReveal>
               </div>
             ))}
           </div>
 
           {/* Mobile Swipe Dot Indicators */}
-          <div className="flex sm:hidden justify-center items-center gap-1.5 mt-4">
+          <div className="flex md:hidden justify-center items-center gap-1.5 mt-4">
             {projectsData.slice(0, 3).map((p, i) => (
               <span key={p.id} className="w-2 h-2 rounded-full bg-navy-deep/20 transition-all" />
             ))}
@@ -310,7 +315,7 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* 4. OUR SERVICES                                              */}
       {/* ============================================================ */}
-      <section className="py-20 lg:py-28 bg-[#F2F6F9] border-b border-surface-border overflow-hidden">
+      <section className="py-20 lg:py-28 bg-surface-warm border-b border-surface-border overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="fade-up">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-6">
@@ -369,83 +374,37 @@ export default function HomePage() {
             id="services-slider"
             className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
           >
-            {servicesData.map((service, index) => (
-              <div key={service.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
-                <ServiceCard service={service} index={index} />
-              </div>
-            ))}
+            {servicesData
+              .filter((service) => service.id !== 'formwork-shuttering')
+              .map((service, index) => (
+                <div key={service.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
+                  <ScrollReveal animation="fade-up" delay={index * 100} duration={600}>
+                    <ServiceCard service={service} index={index} />
+                  </ScrollReveal>
+                </div>
+              ))}
           </div>
 
           {/* Mobile Swipe Dot Indicators */}
           <div className="flex md:hidden justify-center items-center gap-1.5 mt-4">
-            {servicesData.map((s, i) => (
-              <span key={s.id} className="w-2 h-2 rounded-full bg-navy-deep/20 transition-all" />
-            ))}
+            {servicesData
+              .filter((service) => service.id !== 'formwork-shuttering')
+              .map((s, i) => (
+                <span key={s.id} className="w-2 h-2 rounded-full bg-navy-deep/20 transition-all" />
+              ))}
           </div>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* 5. MATERIALS & DETAILS                                       */}
+      {/* 5. FORMWORK & SHUTTERING SYSTEMS                             */}
       {/* ============================================================ */}
-      <section className="py-20 lg:py-28 bg-surface-white border-b border-surface-border overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Left Texture Visual (6 cols) */}
-            <div className="lg:col-span-6 relative">
-              <ScrollReveal animation="fade-up" duration={700}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl bg-surface-neutral">
-                  <Image
-                    src="/images/materials_details.jpg"
-                    alt="Natural Architectural Materials & Details"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-            </div>
+      <FormworkSection />
 
-            {/* Right Text & 3 Specs (6 cols) */}
-            <div className="lg:col-span-6">
-              <ScrollReveal animation="fade-up" duration={700}>
-                <span className="text-[11px] font-semibold tracking-editorial text-ink-muted uppercase block mb-3">
-                  MATERIALS & DETAILS
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-navy-deep font-normal leading-tight">
-                  A Closer Look<br />
-                  at Lasting Quality
-                </h2>
-                <p className="mt-5 text-sm sm:text-base text-ink-muted font-light leading-relaxed">
-                  We carefully select materials, finishes and details that add character and lasting value to every space.
-                </p>
-
-                {/* 3 Details Columns */}
-                <div className="mt-10 pt-8 border-t border-surface-border grid grid-cols-1 sm:grid-cols-3 gap-6">
-                  <div>
-                    <h3 className="text-sm font-semibold text-navy-deep">Premium Materials</h3>
-                    <p className="mt-1 text-xs text-ink-muted font-light leading-relaxed">
-                      Timeless and durable finishes.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-navy-deep">Thoughtful Details</h3>
-                    <p className="mt-1 text-xs text-ink-muted font-light leading-relaxed">
-                      Small elements that make a big difference.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-navy-deep">Sustainable Choices</h3>
-                    <p className="mt-1 text-xs text-ink-muted font-light leading-relaxed">
-                      Better spaces for a healthier tomorrow.
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ============================================================ */}
+      {/* 6. MATERIALS & SOURCING — BRANDS                             */}
+      {/* ============================================================ */}
+      <BrandsSection />
 
       {/* ============================================================ */}
       {/* 6. CLIENT TESTIMONIALS / REVIEWS                             */}
@@ -493,37 +452,39 @@ export default function HomePage() {
             id="testimonials-slider"
             className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
           >
-            {testimonialsData.map((item) => (
+            {testimonialsData.map((item, idx) => (
               <div key={item.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center flex">
-                <div className="bg-surface-white p-7 sm:p-8 rounded-2xl border border-surface-border/80 shadow-xs flex flex-col justify-between h-full w-full">
-                  <div>
-                    <span className="text-3xl font-serif text-blue-royal block mb-3 leading-none">
-                      “
-                    </span>
-                    <p className="text-xs sm:text-sm text-ink-muted font-light leading-relaxed">
-                      {item.quote}
-                    </p>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-surface-border/60 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full overflow-hidden relative bg-surface-neutral shrink-0">
-                      <Image
-                        src={item.avatar || '/images/hero_modern_villa.jpg'}
-                        alt={item.author}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
+                <ScrollReveal animation="fade-up" delay={idx * 120} duration={600} className="w-full flex">
+                  <div className="bg-surface-white p-7 sm:p-8 rounded-2xl border border-surface-border/80 shadow-xs flex flex-col justify-between h-full w-full">
                     <div>
-                      <h4 className="text-sm font-semibold text-navy-deep">
-                        {item.author}
-                      </h4>
-                      <p className="text-xs text-ink-muted font-light">
-                        {item.role}
+                      <span className="text-3xl font-serif text-blue-royal block mb-3 leading-none">
+                        “
+                      </span>
+                      <p className="text-xs sm:text-sm text-ink-muted font-light leading-relaxed">
+                        {item.quote}
                       </p>
                     </div>
+
+                    <div className="mt-8 pt-6 border-t border-surface-border/60 flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full overflow-hidden relative bg-surface-neutral shrink-0">
+                        <Image
+                          src={item.avatar || '/images/hero_modern_villa.jpg'}
+                          alt={item.author}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-navy-deep">
+                          {item.author}
+                        </h4>
+                        <p className="text-xs text-ink-muted font-light">
+                          {item.role}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </ScrollReveal>
               </div>
             ))}
           </div>

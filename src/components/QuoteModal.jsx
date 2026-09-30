@@ -102,14 +102,14 @@ _Sent via Vriksha Website Quotation Form_`;
   const sliderPercentage = ((budgetLakhs - 10) / (300 - 10)) * 100;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#0B1B2B]/75 backdrop-blur-sm transition-opacity">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#081824]/75 backdrop-blur-sm transition-opacity">
       <div 
         className="relative w-full max-w-xl bg-surface-white border border-surface-border shadow-2xl p-5 sm:p-8 md:p-9 transition-all max-h-[92vh] overflow-y-auto rounded-xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 sm:top-5 sm:right-5 text-ink-muted hover:text-navy-deep transition-colors p-1.5"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 text-ink-muted hover:text-primary transition-colors p-1.5"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -118,10 +118,10 @@ _Sent via Vriksha Website Quotation Form_`;
         {!submitted ? (
           <div>
             <div className="mb-5 sm:mb-6">
-              <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider text-[#0B1B2B] uppercase block mb-1">
+              <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider text-brand-orange uppercase block mb-1">
                 INSTANT WHATSAPP QUOTATION
               </span>
-              <h2 className="text-xl sm:text-2xl font-serif text-[#0B1B2B] font-medium leading-tight">
+              <h2 className="text-xl sm:text-2xl font-serif text-primary font-medium leading-tight">
                 Request a Project Quotation
               </h2>
               <p className="text-xs sm:text-sm text-ink-muted mt-1 font-light">
@@ -141,7 +141,7 @@ _Sent via Vriksha Website Quotation Form_`;
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Ramesh Kumar"
-                  className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAFC] border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-[#0B1B2B] transition-colors"
+                  className="w-full px-3.5 py-2.5 text-base sm:text-sm bg-surface-warm border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-primary transition-colors"
                 />
               </div>
 
@@ -157,7 +157,7 @@ _Sent via Vriksha Website Quotation Form_`;
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="99893 82877"
-                    className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAFC] border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-[#0B1B2B] transition-colors"
+                    className="w-full px-3.5 py-2.5 text-base sm:text-sm bg-surface-warm border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
                 <div>
@@ -170,7 +170,7 @@ _Sent via Vriksha Website Quotation Form_`;
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@domain.com"
-                    className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAFC] border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-[#0B1B2B] transition-colors"
+                    className="w-full px-3.5 py-2.5 text-base sm:text-sm bg-surface-warm border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
               </div>
@@ -183,7 +183,7 @@ _Sent via Vriksha Website Quotation Form_`;
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleChange}
-                  className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAFC] border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-[#0B1B2B] transition-colors cursor-pointer"
+                  className="w-full px-3.5 py-2.5 text-base sm:text-sm bg-surface-warm border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-primary transition-colors cursor-pointer"
                 >
                   <option value="Residential Construction">Residential Construction</option>
                   <option value="Commercial Construction">Commercial Construction</option>
@@ -193,12 +193,12 @@ _Sent via Vriksha Website Quotation Form_`;
               </div>
 
               {/* SLIDING BUDGET BAR: 10 Lakhs to 3 Crores */}
-              <div className="bg-[#F8FAFC] p-4 rounded-lg border border-surface-border space-y-3">
+              <div className="bg-surface-warm p-4 rounded-lg border border-secondary/60 space-y-3">
                 <div className="flex items-center justify-between">
-                  <label className="text-xs uppercase tracking-wide font-semibold text-[#0B1B2B]">
+                  <label className="text-xs uppercase tracking-wide font-semibold text-primary">
                     Estimated Budget Range
                   </label>
-                  <span className="px-3 py-1 bg-[#0B1B2B] text-surface-white text-xs sm:text-sm font-semibold rounded-full shadow-sm">
+                  <span className="px-3 py-1 bg-primary text-surface-white text-xs sm:text-sm font-semibold rounded-full shadow-sm">
                     {currentBudgetLabel}
                   </span>
                 </div>
@@ -212,21 +212,21 @@ _Sent via Vriksha Website Quotation Form_`;
                     step="5"
                     value={budgetLakhs}
                     onChange={(e) => setBudgetLakhs(Number(e.target.value))}
-                    className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-[#0B1B2B]"
+                    className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-[#006A9E]"
                     style={{
-                      background: `linear-gradient(to right, #0B1B2B 0%, #0B1B2B ${sliderPercentage}%, #E2E8F0 ${sliderPercentage}%, #E2E8F0 100%)`
+                      background: `linear-gradient(to right, #006A9E 0%, #006A9E ${sliderPercentage}%, #E5DACB ${sliderPercentage}%, #E5DACB 100%)`
                     }}
                     aria-label="Estimated budget range from 10 Lakhs to 3 Crores"
                   />
                 </div>
 
                 {/* Slider range markers */}
-                <div className="flex justify-between items-center text-[11px] text-ink-muted font-medium pt-0.5">
-                  <span>₹10 Lakhs</span>
-                  <span>₹50 Lakhs</span>
-                  <span>₹1 Crore</span>
-                  <span>₹2 Crores</span>
-                  <span>₹3 Crores +</span>
+                <div className="flex justify-between items-center text-[10px] sm:text-[11px] text-ink-muted font-medium pt-0.5">
+                  <span><span className="hidden sm:inline">₹10 Lakhs</span><span className="sm:hidden">₹10L</span></span>
+                  <span><span className="hidden sm:inline">₹50 Lakhs</span><span className="sm:hidden">₹50L</span></span>
+                  <span><span className="hidden sm:inline">₹1 Crore</span><span className="sm:hidden">₹1Cr</span></span>
+                  <span><span className="hidden sm:inline">₹2 Crores</span><span className="sm:hidden">₹2Cr</span></span>
+                  <span><span className="hidden sm:inline">₹3 Crores +</span><span className="sm:hidden">₹3Cr+</span></span>
                 </div>
               </div>
 
@@ -240,7 +240,7 @@ _Sent via Vriksha Website Quotation Form_`;
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Plot location (e.g. Jubilee Hills, Gachibowli), sq ft, or specific requirements..."
-                  className="w-full px-3.5 py-2.5 text-xs sm:text-sm bg-[#F8FAFC] border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-[#0B1B2B] transition-colors resize-none"
+                  className="w-full px-3.5 py-2.5 text-base sm:text-sm bg-surface-warm border border-surface-border rounded-md text-ink-main focus:outline-none focus:border-primary transition-colors resize-none"
                 />
               </div>
 
@@ -261,7 +261,7 @@ _Sent via Vriksha Website Quotation Form_`;
                   <span className="w-2 h-2 rounded-full bg-[#25D366] inline-block animate-pulse" />
                   Instant WhatsApp Connect
                 </span>
-                <span className="font-semibold text-[#0B1B2B]">
+                <span className="font-semibold text-primary">
                   {siteConfig.phoneFormatted}
                 </span>
               </div>
@@ -275,25 +275,25 @@ _Sent via Vriksha Website Quotation Form_`;
             <span className="text-[11px] font-semibold tracking-wider text-[#25D366] uppercase block mb-1">
               QUOTATION INITIATED
             </span>
-            <h3 className="text-2xl font-serif text-[#0B1B2B] font-medium mb-2">
+            <h3 className="text-2xl font-serif text-primary font-medium mb-2">
               Thank You, {formData.name || 'Valued Client'}
             </h3>
             <p className="text-xs sm:text-sm text-ink-muted max-w-md mx-auto mb-5 font-light leading-relaxed">
-              Your quotation details with budget <strong>{currentBudgetLabel}</strong> have been formatted for our WhatsApp team at <strong className="text-[#0B1B2B]">{siteConfig.phoneFormatted}</strong>.
+              Your quotation details with budget <strong>{currentBudgetLabel}</strong> have been formatted for our WhatsApp team at <strong className="text-primary">{siteConfig.phoneFormatted}</strong>.
             </p>
 
-            <div className="p-4 bg-[#F8FAFC] border border-surface-border rounded-lg text-left text-xs text-ink-main space-y-1.5 mb-6">
+            <div className="p-4 bg-surface-warm border border-secondary/60 rounded-lg text-left text-xs text-ink-main space-y-1.5 mb-6">
               <div className="flex justify-between">
                 <span className="text-ink-muted">Client Phone:</span>
-                <span className="font-semibold text-[#0B1B2B]">{formData.phone}</span>
+                <span className="font-semibold text-primary">{formData.phone}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-ink-muted">Service Type:</span>
-                <span className="font-semibold text-[#0B1B2B]">{formData.projectType}</span>
+                <span className="font-semibold text-primary">{formData.projectType}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-ink-muted">Selected Budget:</span>
-                <span className="font-semibold text-[#0B1B2B]">{currentBudgetLabel}</span>
+                <span className="font-semibold text-primary">{currentBudgetLabel}</span>
               </div>
             </div>
 
@@ -310,7 +310,7 @@ _Sent via Vriksha Website Quotation Form_`;
 
               <button
                 onClick={handleReset}
-                className="w-full px-6 py-2.5 bg-[#F1F5F9] text-ink-main hover:bg-[#E2E8F0] text-xs uppercase tracking-wider font-medium rounded-lg transition-colors"
+                className="w-full px-6 py-2.5 bg-surface-warm text-ink-main hover:bg-secondary/40 text-xs uppercase tracking-wider font-medium rounded-lg transition-colors border border-surface-border"
               >
                 Close Window
               </button>

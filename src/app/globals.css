@@ -5,25 +5,22 @@
 @tailwind utilities;
 
 :root {
-  --color-brand-orange: #E8592A;
-  --color-primary-navy: #102F57;
-  --color-dark-navy: #0B2545;
-  --color-royal-blue: #1F5F9A;
-  --color-medium-blue: #3F82BC;
-  --color-soft-blue: #6FA8D8;
-  --color-very-light-blue: #DCEBF7;
-  --color-ice-blue: #EEF6FB;
-  --color-pure-white: #FFFFFF;
-  --color-soft-neutral: #F7FAFC;
-  --color-text: #16324F;
-  --color-muted-text: #66788A;
-  --color-borders: #D8E3EC;
+  /* Option 2: Warm Premium Tokens */
+  --color-primary: #006A9E;
+  --color-accent-orange: #FF7A2E;
+  --color-bg-warm: #FAF6EF;
+  --color-secondary-sand: #DCCBB2;
+  --color-deep-navy: #0C2436;
+  --color-royal-blue: #006A9E;
+  --color-text-main: #1F2937;
+  --color-text-muted: #6B7280;
+  --color-borders: #E5DACB;
 }
 
 html,
 body {
-  color: #16324F;
-  background-color: #FFFFFF;
+  color: #1F2937;
+  background-color: #FAF6EF;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
   max-width: 100vw;
@@ -36,29 +33,37 @@ h1, h2, h3, h4, .font-serif {
 }
 
 ::selection {
-  background-color: #E8592A;
+  background-color: #FF7A2E;
   color: #FFFFFF;
 }
 
-/* Vibrant Orange & Blue Architectural Overlays */
+/* Warm Premium Architectural Overlays */
 .bg-vibrant-hero {
-  background: radial-gradient(circle at 85% 20%, rgba(232, 89, 42, 0.08) 0%, rgba(31, 95, 154, 0.12) 35%, rgba(220, 235, 247, 0.25) 60%, rgba(255, 255, 255, 1) 90%);
+  background: radial-gradient(circle at 85% 20%, rgba(255, 122, 46, 0.12) 0%, rgba(0, 106, 158, 0.12) 35%, rgba(220, 203, 178, 0.3) 65%, rgba(250, 246, 239, 1) 90%);
 }
 
 .bg-orange-gradient {
-  background: linear-gradient(135deg, #FF6B35 0%, #E8592A 100%);
+  background: linear-gradient(135deg, #FF914D 0%, #FF7A2E 100%);
+}
+
+.bg-warm-sand {
+  background-color: #FAF6EF;
+}
+
+.bg-secondary-sand {
+  background-color: #DCCBB2;
 }
 
 .bg-vibrant-dark {
-  background: linear-gradient(135deg, #0B2545 0%, #102F57 50%, #1F5F9A 100%);
+  background: linear-gradient(135deg, #081824 0%, #0C2436 50%, #006A9E 100%);
 }
 
 .btn-orange-glow {
-  box-shadow: 0 8px 24px -4px rgba(232, 89, 42, 0.35);
+  box-shadow: 0 8px 24px -4px rgba(255, 122, 46, 0.35);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .btn-orange-glow:hover {
-  box-shadow: 0 12px 30px -4px rgba(232, 89, 42, 0.5);
+  box-shadow: 0 12px 30px -4px rgba(255, 122, 46, 0.5);
   transform: translateY(-2px);
 }
 
@@ -76,7 +81,7 @@ h1, h2, h3, h4, .font-serif {
 }
 .glow-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px -8px rgba(31, 95, 154, 0.14), 0 0 0 1px rgba(232, 89, 42, 0.4);
+  box-shadow: 0 16px 36px -8px rgba(0, 106, 158, 0.14), 0 0 0 1px rgba(255, 122, 46, 0.4);
 }
 
 /* Editorial link underline animation */
@@ -91,7 +96,7 @@ h1, h2, h3, h4, .font-serif {
   left: 0;
   width: 0%;
   height: 2px;
-  background: linear-gradient(90deg, #E8592A, #1F5F9A);
+  background: linear-gradient(90deg, #FF7A2E, #006A9E);
   transition: width 0.35s ease;
 }
 .editorial-link:hover::after {
@@ -140,5 +145,15 @@ h1, h2, h3, h4, .font-serif {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Touch & Mobile Enhancements */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.touch-pan-x {
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
 }
 

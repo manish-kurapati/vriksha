@@ -4,8 +4,8 @@ export const siteConfig = {
   tagline: "In construction, we don't just work with concrete and steel, but with hope and dreams.",
   phone: "9989382877",
   phoneFormatted: "+91 99893 82877",
-  email: "contact@vrikshaconstructions.com",
-  secondaryEmail: "inquiry@vrikshaconstructions.com",
+  email: "sirigeyp@gmail.com",
+  secondaryEmail: "sirigeyp@gmail.com",
   address: "Road No. 36, Jubilee Hills & Hitec City Corridor, Hyderabad, Telangana 500033",
   workingHours: "Monday – Saturday: 9:00 AM – 7:00 PM (IST)",
   experienceYears: "5+",
@@ -101,7 +101,7 @@ export const servicesData = [
     summary: "Beautiful, practical interiors that reflect you.",
     heroImage: "/images/service_interior_design.jpg",
     accentColor: "royal",
-    overview: "Interior spaces are where tactile intimacy meets spatial harmony. Drawing inspiration from modern European and Japanese minimalist studios, our interiors balance neutral blue and stone tones with custom fluted timber joinery, concealed architectural lighting, and bespoke monolithic stone centerpieces.",
+    overview: "Interior spaces are where tactile intimacy meets spatial harmony. Drawing inspiration from modern European and Japanese minimalist studios, our interiors balance warm earth and stone tones with custom fluted timber joinery, concealed architectural lighting, and bespoke monolithic stone centerpieces.",
     deliverables: [
       "Complete Interior Architectural Detailing",
       "Custom Millwork, Cabinetry & Fluted Joinery",
@@ -112,7 +112,7 @@ export const servicesData = [
     features: [
       {
         title: "Curated Tactile Palette",
-        description: "Carefully calibrated material junctions—bookmatched Carrara marble meeting textured fluted walnut and muted navy velvet."
+        description: "Carefully calibrated material junctions—bookmatched travertine marble meeting textured fluted oak, brass accents, and warm cream linen."
       },
       {
         title: "Concealed Illumination Design",
@@ -159,6 +159,40 @@ export const servicesData = [
     ],
     timeline: "2 – 6 Months",
     materials: ["Restored Sandstone", "Structural Steel Lintels", "Minimal Slimline Glazing", "Honed Basalt Tiles"]
+  },
+  {
+    id: "formwork-shuttering",
+    slug: "formwork-shuttering",
+    href: "/services/formwork-shuttering",
+    title: "Formwork & Shuttering",
+    eyebrow: "OUR SERVICES",
+    summary: "Precision formwork solutions for every construction type.",
+    heroImage: "/images/service_formwork_shuttering.jpg",
+    accentColor: "royal",
+    overview: "Formwork and shuttering are the backbone of every concrete structure. At Vriksha, we specialise in MS Box Shuttering and PVC Shuttering — delivering clean, reusable, and cost-effective mould systems that ensure dimensional accuracy, faster cycle times, and superior concrete finishes for both residential and commercial projects.",
+    deliverables: [
+      "MS Box Shuttering for Columns, Beams & Slabs",
+      "PVC Shuttering Panels for Walls & Slabs",
+      "Formwork Design, Supply & Erection",
+      "Stripping, Cleaning & Maintenance",
+      "Turnkey Shuttering Management on Site"
+    ],
+    features: [
+      {
+        title: "MS Box Shuttering",
+        description: "Our primary shuttering system — fabricated from mild steel box sections, offering high rigidity, multiple reuses, and excellent concrete surface finish. Ideal for columns, beams, slabs, and walls in residential and commercial projects."
+      },
+      {
+        title: "PVC Shuttering",
+        description: "Lightweight and corrosion-resistant PVC panels that are easy to handle, clean, and reuse. Delivers smooth concrete surfaces with minimal finishing work, making it highly cost-effective for repetitive casting."
+      },
+      {
+        title: "Mivan (Aluminium) Shuttering",
+        description: "An industrial-grade aluminium formwork system used in large-scale high-rise projects for simultaneous casting of walls and slabs. While we do not operate Mivan in-house, we facilitate and support Mivan-based projects in collaboration with certified partners."
+      }
+    ],
+    timeline: "Project-Dependent",
+    materials: ["Mild Steel Box Sections", "High-Grade PVC Panels", "Tie Rods & Wing Nuts", "Plywood Backing Sheets"]
   }
 ];
 
@@ -181,8 +215,8 @@ export const projectsData = [
       "/images/materials_details.jpg"
     ],
     summary: "A sculptural modern villa featuring cantilevered fair-faced concrete, floor-to-ceiling structural glazing, and a reflective infinity horizon.",
-    concept: "Designed along an east-west solar axis, The Azure Villa frames panoramic hillside views while utilizing massive cantilevered concrete canopies to shield interior living rooms from intense afternoon heat.",
-    overview: "Conceived as an austere sanctuary elevated above the bustling cityscape, this residence exemplifies minimalist luxury.",
+    concept: "Designed along an east-west solar axis, The Modern Villa frames panoramic hillside views while utilizing massive cantilevered canopies and warm timber louvers to shield interior living rooms from intense afternoon heat.",
+    overview: "Conceived as a sun-drenched sanctuary elevated above the bustling cityscape, this residence exemplifies warm architectural luxury.",
     materials: ["Board-Marked Structural Concrete", "Low-Iron Structural Glazing", "Honed Grey Basalt", "Acoustic White Oak Panels"],
     features: [
       "14-meter column-free cantilevered upper terrace",
@@ -235,10 +269,10 @@ export const projectsData = [
       "/images/service_interior_design.jpg",
       "/images/materials_details.jpg"
     ],
-    summary: "An expansive high-rise penthouse celebrating panoramic urban vistas with muted navy velvet seating, polished concrete, and architectural linear lighting.",
-    concept: "At 38 stories high, the skyline is the principal artwork.",
-    overview: "Curved velvet upholstery breaks the rectilinear geometry of the perimeter glazing.",
-    materials: ["Deep Navy Muted Mohair Velvet", "Diamond-Polished Concrete Floor", "Bookmatched Arabescato Marble"],
+    summary: "An expansive high-rise penthouse celebrating panoramic urban vistas with curved cream bouclé seating, warm slatted oak wall paneling, and architectural linear lighting.",
+    concept: "At 38 stories high, the golden sunset skyline is the principal artwork.",
+    overview: "Curved bouclé upholstery breaks the rectilinear geometry of the perimeter glazing with soft warmth.",
+    materials: ["Textured Cream Bouclé", "Warm Slatted Oak Paneling", "Honed Travertine Marble", "Brushed Brass Lighting"],
     features: [
       "270-degree panoramic floor-to-ceiling glass curtain wall",
       "Lutron computerized architectural lighting scenes tuned for morning, twilight & night",
@@ -339,9 +373,9 @@ export const materialsData = [
     description: "Fine-grained limestone offering thermal insulation and soft neutral texture that weathers gracefully over generations."
   },
   {
-    name: "Bookmatched Carrara & Blue Marble",
+    name: "Honed Travertine & Warm Marble",
     type: "Interior Architecture",
-    description: "Carefully calibrated stone slabs with organic cool blue-grey veining, hand-polished to a satin architectural finish."
+    description: "Carefully calibrated stone slabs with organic warm ivory and sand veining, hand-polished to a satin architectural finish."
   },
   {
     name: "Acoustic Fluted Oak",

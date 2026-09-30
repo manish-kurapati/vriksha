@@ -9,7 +9,7 @@ import { Quote, Star, Award, CheckCircle2 } from 'lucide-react';
 
 export default function TestimonialsPage() {
   return (
-    <div className="bg-surface-white">
+    <div className="bg-surface-warm">
       {/* 1. HERO */}
       <section className="pt-12 pb-16 lg:pt-20 lg:pb-20 border-b border-surface-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

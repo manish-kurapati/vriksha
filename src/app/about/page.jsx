@@ -189,17 +189,17 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="pt-6 flex flex-wrap items-center gap-4">
+                <div className="pt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                   <button
                     onClick={() => openModal()}
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-orange text-white text-xs uppercase tracking-editorial font-semibold rounded-full shadow-lg hover:bg-[#c45a1b] active:scale-95 transition-all"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-orange text-white text-xs uppercase tracking-editorial font-semibold rounded-full shadow-lg hover:bg-brand-orangeHover active:scale-95 transition-all"
                   >
                     <span>Request Studio Consultation</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
                   <Link
                     href="/projects"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-surface-neutral hover:bg-blue-ice text-navy-deep text-xs uppercase tracking-editorial font-semibold rounded-full border border-surface-border transition-all"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-surface-neutral hover:bg-surface-warm text-navy-deep text-xs uppercase tracking-editorial font-semibold rounded-full border border-surface-border transition-all"
                   >
                     <span>Explore Our Work</span>
                     <ArrowRight className="w-4 h-4" />
@@ -246,7 +246,7 @@ export default function AboutPage() {
       {/* ============================================================ */}
       {/* 3. THE 3 PILLARS OF OUR CRAFT (INTERACTIVE PHILOSOPHY)       */}
       {/* ============================================================ */}
-      <section className="py-20 lg:py-28 bg-[#F9FBFC] border-b border-surface-border overflow-hidden">
+      <section className="py-20 lg:py-28 bg-surface-warm border-b border-surface-border overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="fade-up">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -263,7 +263,7 @@ export default function AboutPage() {
           </ScrollReveal>
 
           {/* 3 Interactive Pillar Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {pillars.map((pillar, idx) => {
               const Icon = pillar.icon;
               return (
@@ -340,7 +340,7 @@ export default function AboutPage() {
                   At Vriksha, our multidisciplinary team handles the complete lifecycle from architectural drawings to final key handover under one accountable roof.
                 </p>
 
-                <div className="mt-8 p-6 bg-blue-ice rounded-2xl border border-surface-border">
+                <div className="mt-8 p-6 bg-surface-warm rounded-2xl border border-secondary/60">
                   <h4 className="text-xs uppercase tracking-editorial text-navy-deep font-semibold mb-2">
                     Direct Client Assurance
                   </h4>
@@ -383,7 +383,7 @@ export default function AboutPage() {
       {/* ============================================================ */}
       {/* 5. EVOLUTION TIMELINE                                        */}
       {/* ============================================================ */}
-      <section className="py-20 lg:py-28 bg-[#0B2545] text-surface-white border-b border-navy-deep/50 overflow-hidden">
+      <section className="py-20 lg:py-28 bg-[#081824] text-surface-white border-b border-navy-deep/50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="fade-up">
             <div className="text-center max-w-2xl mx-auto mb-16">
@@ -466,7 +466,7 @@ export default function AboutPage() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 pb-6 pt-2 text-xs sm:text-sm text-ink-muted font-light leading-relaxed border-t border-surface-border/50 bg-[#FBFDFF]">
+                    <div className="px-6 pb-6 pt-2 text-xs sm:text-sm text-ink-muted font-light leading-relaxed border-t border-surface-border/50 bg-surface-warm">
                       {faq.a}
                     </div>
                   )}

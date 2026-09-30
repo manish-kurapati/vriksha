@@ -20,16 +20,16 @@ export default function ProjectCard({ project, priority = false }) {
         />
       </div>
 
-      <div className="p-5 flex items-center justify-between gap-4">
+      <div className="p-4 sm:p-5 flex items-center justify-between gap-3 sm:gap-4">
         <div>
-          <h3 className="text-base sm:text-lg font-semibold text-navy-deep group-hover:text-blue-royal transition-colors">
+          <h3 className="text-sm sm:text-base font-semibold text-navy-deep group-hover:text-brand-orange transition-colors line-clamp-1">
             {project.title}
           </h3>
-          <p className="mt-0.5 text-xs text-ink-muted">
+          <p className="mt-0.5 text-xs text-ink-muted font-light">
             {project.category} | {project.location}
           </p>
         </div>
-        <div className="w-8 h-8 shrink-0 flex items-center justify-center rounded-full border border-surface-border text-navy-deep group-hover:border-navy-deep group-hover:bg-navy-deep group-hover:text-surface-white transition-all duration-300">
+        <div className="w-8 h-8 shrink-0 flex items-center justify-center rounded-full border border-surface-border text-navy-deep group-hover:border-brand-orange group-hover:bg-brand-orange group-hover:text-surface-white transition-all duration-300">
           <ArrowUpRight className="w-3.5 h-3.5" />
         </div>
       </div>
