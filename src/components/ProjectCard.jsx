@@ -7,9 +7,9 @@ export default function ProjectCard({ project, priority = false }) {
   return (
     <Link
       href={project.href}
-      className="group block bg-surface-white border border-surface-border/80 rounded-2xl transition-all duration-300 hover:shadow-[0_12px_32px_rgba(16,47,87,0.08)] overflow-hidden"
+      className="group block bg-surface-white border border-surface-border/80 rounded-2xl transition-all duration-300 hover:shadow-[0_12px_32px_rgba(16,47,87,0.08)] overflow-hidden flex flex-col h-full w-full"
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral select-none">
+      <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral select-none shrink-0">
         <Image
           src={project.heroImage}
           alt={project.title}
@@ -20,7 +20,7 @@ export default function ProjectCard({ project, priority = false }) {
         />
       </div>
 
-      <div className="p-4 sm:p-5 flex items-center justify-between gap-3 sm:gap-4">
+      <div className="p-4 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 flex-1">
         <div>
           <h3 className="text-sm sm:text-base font-semibold text-navy-deep group-hover:text-brand-orange transition-colors line-clamp-1">
             {project.title}

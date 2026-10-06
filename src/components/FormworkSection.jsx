@@ -121,25 +121,25 @@ export default function FormworkSection() {
         </ScrollReveal>
 
         {/* Mobile Sideways 1-Card Snap Scroll / Desktop 2-Card Grid */}
-        <div
-          id="formwork-slider"
-          onScroll={handleScroll}
-          className="flex md:grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 max-w-5xl mx-auto overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full"
-        >
-          {formworkCards.map((card, index) => {
-            const IconComponent = card.icon;
-            return (
-              <div
-                key={card.id}
-                className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center flex flex-col"
-              >
-                <ScrollReveal animation="fade-up" delay={index * 150} duration={600} className="h-full flex flex-col">
+        <ScrollReveal animation="fade-up">
+          <div
+            id="formwork-slider"
+            onScroll={handleScroll}
+            className="flex md:grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 max-w-5xl mx-auto overflow-x-auto overflow-y-hidden md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full items-stretch"
+          >
+            {formworkCards.map((card) => {
+              const IconComponent = card.icon;
+              return (
+                <div
+                  key={card.id}
+                  className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-start flex flex-col"
+                >
                   <Link
                     href="/services/formwork-shuttering"
                     className="group block bg-surface-white border border-surface-border/90 rounded-2xl transition-all duration-300 hover:shadow-[0_16px_40px_rgba(16,47,87,0.09)] hover:border-brand-orange/40 overflow-hidden flex flex-col h-full"
                   >
                   {/* Image on top */}
-                  <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral select-none">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral select-none shrink-0">
                     <Image
                       src={card.image}
                       alt={card.title}
@@ -199,14 +199,13 @@ export default function FormworkSection() {
                         <span>Learn More</span>
                         <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                       </div>
-                    </div>
                   </div>
                 </Link>
-              </ScrollReveal>
-            </div>
+              </div>
             );
           })}
         </div>
+      </ScrollReveal>
 
         {/* Mobile Swipe Dot Indicators */}
         <div className="flex md:hidden justify-center items-center gap-2 mt-4">

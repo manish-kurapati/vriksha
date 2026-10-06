@@ -164,11 +164,19 @@ picture {
 }
 
 /* Horizontal scrollable sliders:
-   Enables smooth horizontal swiping while explicitly allowing vertical page scrolling */
+   Enables smooth horizontal swiping while explicitly allowing vertical page scrolling.
+   overflow-y: hidden prevents the slider from scrolling vertically inside itself. */
 .touch-pan-x,
 .mobile-slider-scroll {
+  overflow-x: auto;
+  overflow-y: hidden !important;
   touch-action: pan-x pan-y !important;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto !important;
+}
+
+.mobile-slider-scroll > * {
+  overflow-y: hidden !important;
 }
 

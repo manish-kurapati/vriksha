@@ -289,18 +289,18 @@ export default function HomePage() {
           </ScrollReveal>
 
           {/* Mobile Sideways 1-Card Snap Scroll / Tablet & Desktop Grid */}
-          <div
-            id="projects-slider"
-            className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full"
-          >
-            {projectsData.slice(0, 3).map((project, idx) => (
-              <div key={project.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
-                <ScrollReveal animation="fade-up" delay={idx * 120} duration={600}>
+          <ScrollReveal animation="fade-up">
+            <div
+              id="projects-slider"
+              className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto overflow-y-hidden md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full items-stretch"
+            >
+              {projectsData.slice(0, 3).map((project, idx) => (
+                <div key={project.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-start flex flex-col">
                   <ProjectCard project={project} priority={idx === 0} />
-                </ScrollReveal>
-              </div>
-            ))}
-          </div>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
 
           {/* Mobile Swipe Dot Indicators */}
           <div className="flex md:hidden justify-center items-center gap-1.5 mt-4">
@@ -369,18 +369,18 @@ export default function HomePage() {
           </ScrollReveal>
 
           {/* Mobile Sideways 1-Card Snap Scroll / Desktop Grid */}
-          <div
-            id="services-slider"
-            className="flex md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full"
-          >
-            {servicesData.map((service, index) => (
-              <div key={service.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
-                <ScrollReveal animation="fade-up" delay={index * 100} duration={600}>
+          <ScrollReveal animation="fade-up">
+            <div
+              id="services-slider"
+              className="flex md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 overflow-x-auto overflow-y-hidden md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full items-stretch"
+            >
+              {servicesData.map((service, index) => (
+                <div key={service.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-start flex flex-col">
                   <ServiceCard service={service} index={index} />
-                </ScrollReveal>
-              </div>
-            ))}
-          </div>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
 
           {/* Mobile Swipe Dot Indicators */}
           <div className="flex md:hidden justify-center items-center gap-1.5 mt-4">
@@ -438,13 +438,13 @@ export default function HomePage() {
           </ScrollReveal>
 
           {/* Mobile Sideways 1-Card Snap Scroll / Desktop Grid */}
-          <div
-            id="testimonials-slider"
-            className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full"
-          >
-            {testimonialsData.map((item, idx) => (
-              <div key={item.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center flex">
-                <ScrollReveal animation="fade-up" delay={idx * 120} duration={600} className="w-full flex">
+          <ScrollReveal animation="fade-up">
+            <div
+              id="testimonials-slider"
+              className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto overflow-y-hidden md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full items-stretch"
+            >
+              {testimonialsData.map((item) => (
+                <div key={item.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-start flex flex-col">
                   <div className="bg-surface-white p-7 sm:p-8 rounded-2xl border border-surface-border/80 shadow-xs flex flex-col justify-between h-full w-full">
                     <div>
                       <span className="text-3xl font-serif text-blue-royal block mb-3 leading-none">
@@ -474,10 +474,10 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                </ScrollReveal>
-              </div>
-            ))}
-          </div>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

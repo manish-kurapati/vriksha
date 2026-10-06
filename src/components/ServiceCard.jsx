@@ -17,9 +17,9 @@ export default function ServiceCard({ service, index = 0 }) {
   return (
     <Link
       href={service.href}
-      className="group block bg-surface-white border border-surface-border/80 rounded-2xl transition-all duration-300 hover:shadow-[0_12px_32px_rgba(16,47,87,0.08)] overflow-hidden flex flex-col h-full"
+      className="group block bg-surface-white border border-surface-border/80 rounded-2xl transition-all duration-300 hover:shadow-[0_12px_32px_rgba(16,47,87,0.08)] overflow-hidden flex flex-col h-full w-full"
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral select-none">
+      <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral select-none shrink-0">
         <Image
           src={service.heroImage}
           alt={service.title}
