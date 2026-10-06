@@ -124,7 +124,7 @@ export default function FormworkSection() {
         <div
           id="formwork-slider"
           onScroll={handleScroll}
-          className="flex md:grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 max-w-5xl mx-auto overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
+          className="flex md:grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 max-w-5xl mx-auto overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full"
         >
           {formworkCards.map((card, index) => {
             const IconComponent = card.icon;
@@ -139,13 +139,13 @@ export default function FormworkSection() {
                     className="group block bg-surface-white border border-surface-border/90 rounded-2xl transition-all duration-300 hover:shadow-[0_16px_40px_rgba(16,47,87,0.09)] hover:border-brand-orange/40 overflow-hidden flex flex-col h-full"
                   >
                   {/* Image on top */}
-                  <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral select-none">
                     <Image
                       src={card.image}
                       alt={card.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none select-none"
                     />
                     {/* Badge */}
                     <div className="absolute top-4 right-4 px-3 py-1 bg-surface-white/95 backdrop-blur-md rounded-full border border-surface-border/60 text-[10px] font-semibold uppercase tracking-editorial text-brand-orange shadow-sm flex items-center gap-1.5">

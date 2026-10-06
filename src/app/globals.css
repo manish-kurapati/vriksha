@@ -152,8 +152,23 @@ h1, h2, h3, h4, .font-serif {
   -webkit-tap-highlight-color: transparent;
 }
 
-.touch-pan-x {
-  touch-action: pan-x;
+/* Prevent images from triggering native drag or touch callout on touch devices */
+img,
+picture {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+/* Horizontal scrollable sliders:
+   Enables smooth horizontal swiping while explicitly allowing vertical page scrolling */
+.touch-pan-x,
+.mobile-slider-scroll {
+  touch-action: pan-x pan-y !important;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 

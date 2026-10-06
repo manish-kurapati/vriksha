@@ -291,7 +291,7 @@ export default function HomePage() {
           {/* Mobile Sideways 1-Card Snap Scroll / Tablet & Desktop Grid */}
           <div
             id="projects-slider"
-            className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
+            className="flex md:grid md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full"
           >
             {projectsData.slice(0, 3).map((project, idx) => (
               <div key={project.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
@@ -371,7 +371,7 @@ export default function HomePage() {
           {/* Mobile Sideways 1-Card Snap Scroll / Desktop Grid */}
           <div
             id="services-slider"
-            className="flex md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
+            className="flex md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full"
           >
             {servicesData.map((service, index) => (
               <div key={service.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center">
@@ -440,7 +440,7 @@ export default function HomePage() {
           {/* Mobile Sideways 1-Card Snap Scroll / Desktop Grid */}
           <div
             id="testimonials-slider"
-            className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar touch-pan-x w-full"
+            className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar mobile-slider-scroll w-full"
           >
             {testimonialsData.map((item, idx) => (
               <div key={item.id} className="w-full min-w-full md:min-w-0 md:w-full shrink-0 md:shrink snap-center flex">
@@ -456,12 +456,12 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-8 pt-6 border-t border-surface-border/60 flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full overflow-hidden relative bg-surface-neutral shrink-0">
+                      <div className="w-10 h-10 rounded-full overflow-hidden relative bg-surface-neutral shrink-0 select-none">
                         <Image
                           src={item.avatar || '/images/hero_modern_villa.jpg'}
                           alt={item.author}
                           fill
-                          className="object-cover"
+                          className="object-cover pointer-events-none select-none"
                         />
                       </div>
                       <div>

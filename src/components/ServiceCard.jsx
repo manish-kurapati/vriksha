@@ -19,13 +19,13 @@ export default function ServiceCard({ service, index = 0 }) {
       href={service.href}
       className="group block bg-surface-white border border-surface-border/80 rounded-2xl transition-all duration-300 hover:shadow-[0_12px_32px_rgba(16,47,87,0.08)] overflow-hidden flex flex-col h-full"
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral">
+      <div className="relative aspect-[16/10] overflow-hidden bg-surface-neutral select-none">
         <Image
           src={service.heroImage}
           alt={service.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none select-none"
         />
       </div>
 
